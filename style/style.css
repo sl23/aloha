@@ -1,10 +1,253 @@
-h1 {
-    font-size: 55px;
-    color: azure;
+header {
+  color: #e2574c;
+  text-align: center;
+  vertical-align: middle;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin: 10px;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #d7d7d7;
 }
 
-p {
-    font-size: 12px;
-    color: blueviolet;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95vw;
+    height: 150px;
+
 }
 
+#logo{
+    display: flex;
+    justify-content: space-between;
+    height: 30vw;
+    width: 30vh;
+    position: relative;
+    
+}
+
+img {
+    max-width: 100%;
+  }
+
+#cart{
+    display: flex;
+    justify-content: space-between;
+    width: 15vw;
+    height: 15vh;
+}
+
+div.topnav {
+  color: #e2574c;
+  font-family: "Raleway Bold";
+  font-style: bold;
+  font-size: 14pt;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  word-spacing: 70px;
+}
+
+.heroimage {
+  /* Box Dimensions */
+  height: 600px;
+  width: 100vw;
+
+  text-align: center;
+  color: white;
+
+  background-image: url("/assets/images/banner-girl.png"),
+    url("/assets/images/flower-bkgd.jpg");
+  background-repeat: no-repeat, repeat-x;
+  background-image: linear-gradient();
+  background-position: top 100px center, top center;
+}
+
+.herotext {
+    position:relative;
+    top: 330px;
+  display: flex;
+  font-family: "Raleway";
+  font-size: 36pt;
+  text-shadow: 5px 1px 6px grey;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+#collectiondate{
+    position: relative;
+    font-family: "Playfair Display";
+    top: 400px;
+    font-size: 32pt;
+}
+
+.aboutus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  justify-content: center;
+  margin: 40px; 
+}
+#aboutustext {
+  margin-top: 40px;
+  font-family: "Raleway Light";
+  font-size: 16pt;
+  text-align: center;
+  line-height:40px;
+  color: #2d2d2d;
+  
+}
+
+.italicheading {
+    text-align: center;
+  font-size: 28pt;
+  font-style: italic;
+}
+
+.boldheading {
+    text-align: center;
+    font-family: "Playfair Display Bold";
+  font-size: 28pt;
+  font-style: bold;
+  margin-left: 10px;
+  position: relative;
+  font-weight: bolder;
+}
+
+/* Category Display */
+
+.flex-container {
+  width: 100vw;
+  list-style: none;
+  display: flex;
+}
+.wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.flex-item {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+
+  color: white;
+  font-family: "Raleway";
+  font-size: 2em;
+  text-align: center;
+}
+
+#mens {
+  background-image: url("/assets/images/mens-category.jpg");
+  width: 100vw;
+}
+
+#trends {
+  background-image: url("/assets/images/trends-category.jpg");
+  width: 50%;
+}
+
+#glasses {
+  background-image: url("/assets/images/glasses-category.jpg");
+  width: 50%;
+}
+
+#sale {
+  background-image: url("/assets/images/sale-category.jpg");
+  width: 50%;
+}
+
+#bags {
+  background-image: url("/assets/images/bags-category.jpg");
+  width: 50%;
+}
+#womens {
+  background-image: url("/assets/images/womens-category.jpg");
+  width: 100%;
+}
+@media all and (min-width: 1240px) {
+  #mens {
+    width: 50%;
+  }
+  #trends {
+    width: 25%;
+  }
+  #glasses {
+    width: 25%;
+  }
+  #sale {
+    width: 25%;
+  }
+  #bags {
+    width: 25%;
+  }
+  #womens {
+    width: 50%;
+  }
+}
+
+.featuredproducts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  background-image: url("/assets/images/wave-bkgd.jpg");
+  height: 500px;
+  width: 100vw;
+  background-position: bottom;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.footertext {
+  margin: 10px;
+}
+
+.oval {
+  position: relative;
+  margin-top: 50px;
+  width: 80vw;
+  height: 60px;
+  background: white;
+  border-radius: 40px;
+  padding-left: 10px;
+  z-index: 0;
+}
+.submitbutton {
+  position: relative;
+  margin-top:50px;
+  height: 50px;
+  width: 150px;
+  background: #e2574C;
+  border-radius: 40px;
+  font-family: "Raleway";
+  color: white;
+  font-size: 12pt;
+  font-style: bold;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 100vw;
+    background-color: #242424;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;

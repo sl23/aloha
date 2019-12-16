@@ -5,11 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Aloha</title>
+    <script
+      src="https://kit.fontawesome.com/35aae79268.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/fonts/fonts.css" />
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-    <h1>Placeholder</h1>
-    <p>ipsus</p>
+    <header class="header">
+      <!-- Logo & Cart Button -->
+      <a id="logo"
+        ><img src="assets/images/aloha-logo.svg" alt="aloha-logo" />
+      </a>
+      <a id="cart"
+        ><img src="assets/images/cart-icon.svg" alt="shopping cart"
+      /></a>
+      <!-- Section for header navigation bar. Placeholder URL's for now  -->
+    </header>
+
+    <div class="topnav" id="topnav">
+      <a>ABOUT</a>
+      <a>SHOP</a>
+      <a>FEATURED</a>
+      <a>UPDATES</a>
+    </div>
+
+    <main>
+      <section class="heroimage">
+        <h3 class="herotext">
+          NEW COLLECTION
+        </h3>
+        <h3 class="herotext" id="collectiondate">
+          Spring/Summer
+        </h3>
+        <h3 class="herotext" id="collectiondate">
+          2016
+        </h3>
+      </section>
+
+      <section class="aboutus">
+        <!--  -->
+        <div class="headertext" style="clear: both">
+          <h1 class="italicheading" style="float: left">Hand-Crafted</h1>
+          <h1 class="boldheading" style="float: right">Styles</h1>
+        </div>
+        <p id="aboutustext">
+          Aloha Apparel Co. sells only the finest ready-to-travel clothing.
+          Browse our current selection of products or sign-up for updates below
+        </p>
+      </section>
+
+      <!-- Product Section -->
+      <ul class="flex-container wrap">
+        <li class="flex-item" id="mens">MEN'S</li>
+        <li class="flex-item" id="trends">TRENDS</li>
+        <li class="flex-item" id="glasses">GLASSES</li>
+        <li class="flex-item" id="sale">SALE</li>
+        <li class="flex-item" id="bags">BAGS</li>
+        <li class="flex-item" id="womens">WOMEN'S</li>
+      </ul>
+
+      <section class="featuredproducts">
+        <div class="headertext" style="clear: both">
+          <h1 class="italicheading" style="float: left">Most-Loved</h1>
+          <h1 class="boldheading" style="float: right">Products</h1>
+        </div>
+        <br />
+        <p>DRESSES</p>
+        <h3>Checked Stretch Dress</h3>
+      </section>
+
+      <section class="signup">
+        <div class="headertext" style="clear: both">
+          <h1 class="italicheading" style="float: left">Sign-up for</h1>
+          <h1 class="boldheading" style="float: right">Updates</h1>
+        </div>
+        <h3 class="footertext">
+          Stay updated on our latest product releases, be first to find out
+          about upcoming sales, and get free style tips from our blog.
+          Unsubscribe at any time.
+        </h3>
+        <input class="oval" type="text" id="email" placeholder="Your Email" />
+        <input class="submitbutton" type="submit" value="Subscribe" />
+      </section>
+    </main>
+
+    <footer class="footer">
+      <h2><i class="far fa-copyright"></i>2016 Aloha Apparel Co.</h2>
+      <h2>Powered by HTML and CSS</h2>
+      <br />
+      <h2>604-604-6040. info@alohaapparel</h2>
+      <br />
+      <h2>1490 W Broadway</h2>
+      <h2>Vancouver, BC, Canada</h2>
+      <br />
+      <ul>
+        <l> <i class="fab fa-facebook-f"></i></l>
+        <l> <i class="fab fa-twitter"></i></l>
+        <l> <i class="fab fa-instagram"></i></l>
+        <l> <i class="fab fa-pinterest"></i></l>
+        <l> <i class="fab fa-google-plus-g"></i></l>
+      </ul>
+    </footer>
   </body>
 </html>
