@@ -12,16 +12,42 @@
     <link rel="stylesheet" href="style/reset.css" />
     <link rel="stylesheet" href="style/fonts/fonts.css" />
     <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
   </head>
   <body>
     <header class="header">
       <!-- Logo & Cart Button -->
-      <a id="logo"
-        ><img src="assets/images/aloha-logo.svg" alt="aloha-logo" />
+        <a class="headerbox" id="logo"
+          ><img src="assets/images/aloha-logo.svg" alt="aloha-logo" /> </a>
+
+      <div class="headerbox" id="navbar">
+        <a>ABOUT</a>
+        <a>SHOP</a>
+        <a>FEATURED</a>
+        <a>UPDATES</a>
+      </div>
+
+      <a class="headerbox" id="cart"
+          ><img  id = "carticon" src="assets/images/cart-icon.svg" alt="shopping cart"/>
+          <a id="clicks">0</a>  
       </a>
-      <a id="cart"
-        ><img src="assets/images/cart-icon.svg" alt="shopping cart"
-      /></a>
+
+
+      
+      <!-- <div class="headerbox"><span><img src="assets/images/aloha-logo.svg" alt="aloha-logo" /></span></div>
+      <div class="headerbox"><span><ol class="headerbox" id="navbar">
+          <a>ABOUT</a>
+          <a>SHOP</a>
+          <a>FEATURED</a>
+          <a>UPDATES</a>
+        </ol></span></div>
+      <div class="headerbox"><span><img src="assets/images/cart-icon.svg" alt="shopping cart"/></a
+      ></span></div> -->
+    </div>
+
       <!-- Section for header navigation bar. Placeholder URL's for now  -->
     </header>
 
@@ -58,14 +84,15 @@
       </section>
 
       <!-- Product Section -->
-      <ul class="flex-container wrap">
-        <li class="flex-item" id="mens">MEN'S</li>
-        <li class="flex-item" id="trends">TRENDS</li>
-        <li class="flex-item" id="glasses">GLASSES</li>
-        <li class="flex-item" id="sale">SALE</li>
-        <li class="flex-item" id="bags">BAGS</li>
-        <li class="flex-item" id="womens">WOMEN'S</li>
-      </ul>
+
+      <div class="flex-container wrap">
+        <h1 class="flex-item mens">MEN'S</h1>
+        <h1 class="flex-item" id="trends">TRENDS</h1>
+        <h1 class="flex-item" id="glasses">GLASSES</h1>
+        <h1 class="flex-item" id="sale">SALE</h1>
+        <h1 class="flex-item" id="bags">BAGS</h1>
+        <h1 class="flex-item" id="womens">WOMEN'S</h1>
+      </div>
 
       <section class="featuredproducts">
         <div class="headertext" style="clear: both">
@@ -73,8 +100,95 @@
           <h1 class="boldheading" style="float: right">Products</h1>
         </div>
         <br />
-        <p>DRESSES</p>
-        <h3>Checked Stretch Dress</h3>
+      </section>
+
+      <section class="carousel">
+        <div
+          class="main-carousel"
+          data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false }'
+        >
+          <div class="carousel-cell">
+            <img
+              src="/assets/images/checked-stretch-dress.jpg"
+              alt="Image of blue dress"
+            />
+            <p class="product-type">DRESSES</p>
+            <p class="product-name">Checked Red Dress</p>
+            <p class="price">$129.00</p>
+            <button type = "button" class = "add-to-cart" id= "cartButon" onClick="onClick()">Add to Cart</button>
+          </div>
+          <div class="carousel-cell">
+            <img
+              src="/assets/images/blue-hipster-backpack.jpg"
+              alt="Blue Packback"
+            />
+            <p class="product-type">BAGS</p>
+            <p class="product-name">Blue Hipster Backpack</p>
+            <p class="price">$69.00</p>
+            <button type = "button" class = "add-to-cart" id= "cartButon" onClick="onClick()">Add to Cart</button>
+          </div>
+          <div class="carousel-cell">
+            <img
+              src="/assets/images/demin-overall-shorts.jpg"
+              alt="Denimn Overall Shorts"
+            />
+            <p class="product-type">DEMIN</p>
+            <p class="product-name">Demin Overall Shorts</p>
+            <p class="price">$89.00</p>
+            <button type = "button" class = "add-to-cart" id= "cartButon" onClick="onClick()">Add to Cart</button>
+          </div>
+          <div class="carousel-cell">
+            <img
+              src="/assets/images/pink-dotted-dress.jpg"
+              alt="Image of blue dress"
+            />
+            <p class="product-type">DRESSES</p>
+            <p class="product-name">Pink Dotted Dress</p>
+            <p class="price">$99.00</p>
+            <button type = "button" class = "add-to-cart" id= "cartButon" onClick="onClick()">Add to Cart</button>
+          </div>
+
+          <div class="carousel-cell">
+            <img
+              src="/assets/images/blue-silk-dress.jpg"
+              alt="Image of blue dress"
+            />
+            <p class="product-type">DRESSES</p>
+            <p class="product-name">Blue Silk Dress</p>
+            <p class="price">$169.99</p>
+            <button type = "button" class = "add-to-cart" id= "cartButon" onClick="onClick()">Add to Cart</button>
+          </div>
+          <div class="carousel-cell">
+            <img
+              src="/assets/images/cotton-blue-shirt.jpg"
+              alt="Image of blue dress"
+            />
+            <p class="product-type">SHIRTS</p>
+            <p class="product-name">Blue Premium Cotton Shirt</p>
+            <p class="price">$59.00</p>
+            <button type = "button" class = "add-to-cart" id= "cartButon" onClick="onClick()">Add to Cart</button>
+          </div>
+          <div class="carousel-cell">
+            <img
+              src="/assets/images/cotton-yellow-tshirt.jpg"
+              alt="Image of blue dress"
+            />
+            <p class="product-type">SHIRTS</p>
+            <p class="product-name">Ultra Premium Shirt</p>
+            <p class="price">$129.00</p>
+            <button type = "button" class = "add-to-cart" id= "cartButon" onClick="onClick()">Add to Cart</button>
+          </div>
+          <div class="carousel-cell">
+            <img
+              src="/assets/images/stretch-knit-dress.jpg"
+              alt="Image of dress"
+            />
+            <p class="product-type">DRESSES</p>
+            <p class="product-name">Sketch Knit Dress</p>
+            <p class="price">$122.00</p>
+            <button type = "button" class = "add-to-cart" id= "cartButon" onClick="onClick()">Add to Cart</button>
+          </div>
+        </div>
       </section>
 
       <section class="signup">
@@ -87,12 +201,13 @@
           about upcoming sales, and get free style tips from our blog.
           Unsubscribe at any time.
         </h3>
-        <input class="oval" type="text" id="email" placeholder="Your Email" />
-        <input class="submitbutton" type="submit" value="Subscribe" />
+        <input class="oval" id="subscribe-email" type="email" required = "required" placeholder="Your Email" />
+        <button class="submitbutton" type="submit" id = "subscribe-submit" onClick = "verifyEmail()">Subscribe</button>
       </section>
     </main>
 
     <footer class="footer">
+      <div class="contactinfo">
       <h2><i class="far fa-copyright"></i>2016 Aloha Apparel Co.</h2>
       <h2>Powered by HTML and CSS</h2>
       <br />
@@ -100,14 +215,27 @@
       <br />
       <h2>1490 W Broadway</h2>
       <h2>Vancouver, BC, Canada</h2>
-      <br />
-      <ul>
-        <l> <i class="fab fa-facebook-f"></i></l>
-        <l> <i class="fab fa-twitter"></i></l>
-        <l> <i class="fab fa-instagram"></i></l>
-        <l> <i class="fab fa-pinterest"></i></l>
-        <l> <i class="fab fa-google-plus-g"></i></l>
+    </div>
+    <div class = "socialmediaicon">  
+    <ul class="socialmediaicon">
+        <li> <i class="fab fa-facebook-f"></i></li>
+        <li> <i class="fab fa-twitter"></i></li>
+        <li> <i class="fab fa-instagram"></i></li>
+        <li> <i class="fab fa-pinterest"></i></li>
+        <li> <i class="fab fa-google-plus-g"></i></li>
       </ul>
+    </div>
+    <ul class="socialmediatitle">
+        <li> <p class=socialmedia> Facebook </p></li>
+        <li> <p class=socialmedia> Twitter </p></li>
+        <li> <p class=socialmedia> Instagram </p></li>
+        <li> <p class=socialmedia> Pinterest </p></li>
+        <li> <p class=socialmedia> Google+ </p></li>
+      </ul>
+    </div>
+
     </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

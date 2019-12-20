@@ -1,0 +1,26 @@
+{
+  "name": "aloha",
+  "version": "1.0.0",
+  "description": "Aloha Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sl23/aloha.git"
+  },
+  "keywords": [
+    "aloha",
+    "website"
+  ],
+  "author": "Sean Li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sl23/aloha/issues"
+  },
+  "homepage": "https://github.com/sl23/aloha#readme",
+  "dependencies": {
+    "flickity": "^2.2.1"
+  }
+}

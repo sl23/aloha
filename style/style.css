@@ -2,59 +2,185 @@ header {
   color: #e2574c;
   text-align: center;
   vertical-align: middle;
+  word-spacing: 40px;
 
   display: flex;
   justify-content: space-between;
 
-  margin: 10px;
   border-bottom-width: 3px;
   border-bottom-style: solid;
   border-bottom-color: #d7d7d7;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 95vw;
-    height: 150px;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+}
+/* .header:first-child > span {
+  margin-right: auto;
 }
 
-#logo{
-    display: flex;
-    justify-content: space-between;
-    height: 30vw;
-    width: 30vh;
-    position: relative;
-    
+.header:last-child > span {
+  margin-left: auto;
+} */
+
+.headerbox {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* .headerbox:nth-last-child(2) {
+  flex-basis: 30vw;
+  justify-content: space-around;
+} */
+
+#logo {
+  display: flex;
+  height: 70px;
+}
+
+#cart {
+  display: flex;
+  height: 7vw;
 }
 
 img {
-    max-width: 100%;
-  }
+  max-width: 100%;
+}
 
-#cart{
-    display: flex;
-    justify-content: space-between;
-    width: 15vw;
-    height: 15vh;
+#clicks {
+  position: relative;
+  background: #e2574c;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  right: 45px;
+  bottom: 25px;
+  color: white;
+  font-family: "Raleway";
+  font-size: 13pt;
+}
+
+#carticon {
+  padding-right: 2vw;
+}
+
+#navbar {
+  color: #e2574c;
+  font-family: "Raleway";
+  font-style: bold;
+  font-size: 16pt;
+  text-align: center;
+  justify-content: space-around;
 }
 
 div.topnav {
   color: #e2574c;
-  font-family: "Raleway Bold";
+  font-family: "Raleway";
   font-style: bold;
-  font-size: 14pt;
+  font-size: 10pt;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  word-spacing: 70px;
+  word-spacing: 40px;
+}
+
+@media all and (min-width: 1250px) {
+  #carticon {
+    padding-right: 2vw;
+  }
+}
+
+@media all and (min-width: 600px) {
+  header {
+    border-bottom-width: 0px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+  }
+  .header:first-child > span {
+    margin-right: auto;
+  }
+
+  #navbar {
+    flex-basis: 35vw;
+    font-size: 16pt;
+    word-spacing: 20px;
+    max-width: 700px;
+  }
+
+  .header:last-child > span {
+    margin-left: auto;
+  }
+
+  .headerbox {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .headerbox:nth-last-child(2) {
+    justify-content: space-around;
+  }
+
+  #topnav {
+    display: none;
+  }
+
+  #logo {
+    position: relative;
+    height: 7wv;
+  }
+  #cart {
+    position: relative;
+    height: 10vw;
+    justify-content: flex-end;
+  }
+  .cartStatus {
+    right: 27px;
+    display: inline;
+    position: relative;
+    top: -26px;
+  }
+}
+
+@media all and (max-width: 599px) {
+  #navbar {
+    display: none;
+  }
+  #logo {
+    position: relative;
+    right: 2vw;
+    height: 15vw;
+  }
+  #cart {
+    position: relative;
+    height: 15vw;
+    justify-content: flex-end;
+  }
+  .headerbox:nth-last-child(2) {
+    flex-basis: 0vw;
+    justify-content: flex-end;
+  }
+
+  .cartStatus {
+    right: 27px;
+    display: inline;
+    position: relative;
+    top: -26px;
+  }
 }
 
 .heroimage {
   /* Box Dimensions */
-  height: 600px;
+  height: 56em;
   width: 100vw;
 
   text-align: center;
@@ -65,25 +191,26 @@ div.topnav {
   background-repeat: no-repeat, repeat-x;
   background-image: linear-gradient();
   background-position: top 100px center, top center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
 
 .herotext {
-    position:relative;
-    top: 330px;
+  position: relative;
+  top: 330px;
   display: flex;
   font-family: "Raleway";
-  font-size: 36pt;
+  font-size: 22pt;
   text-shadow: 5px 1px 6px grey;
   width: 100vw;
   align-items: center;
   justify-content: center;
 }
 
-#collectiondate{
-    position: relative;
-    font-family: "Playfair Display";
-    top: 400px;
-    font-size: 32pt;
+#collectiondate {
+  position: relative;
+  font-family: "Playfair Display";
+  top: 400px;
+  font-size: 32pt;
 }
 
 .aboutus {
@@ -92,28 +219,29 @@ div.topnav {
   align-items: center;
   height: 400px;
   justify-content: center;
-  margin: 40px; 
+  margin: 40px;
 }
 #aboutustext {
   margin-top: 40px;
   font-family: "Raleway Light";
-  font-size: 16pt;
+  font-size: 12pt;
   text-align: center;
-  line-height:40px;
+  line-height: 40px;
   color: #2d2d2d;
-  
 }
 
 .italicheading {
-    text-align: center;
-  font-size: 28pt;
+  text-align: center;
+  font-size: 18pt;
   font-style: italic;
+  font-family: "Playfair Display";
+  font-weight: 300;
 }
 
 .boldheading {
-    text-align: center;
-    font-family: "Playfair Display Bold";
-  font-size: 28pt;
+  text-align: center;
+  font-family: "Playfair Display Bold";
+  font-size: 18pt;
   font-style: bold;
   margin-left: 10px;
   position: relative;
@@ -123,7 +251,7 @@ div.topnav {
 /* Category Display */
 
 .flex-container {
-  width: 100vw;
+  height: fit-content;
   list-style: none;
   display: flex;
 }
@@ -132,73 +260,177 @@ div.topnav {
   flex-wrap: wrap;
 }
 .flex-item {
-  height: 400px;
+  min-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   color: white;
   font-family: "Raleway";
   font-size: 2em;
   text-align: center;
+  flex: 1 1 auto;
+  margin-bottom: 5px;
 }
 
-#mens {
+.mens {
   background-image: url("/assets/images/mens-category.jpg");
-  width: 100vw;
+  width: 100%;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
 
 #trends {
   background-image: url("/assets/images/trends-category.jpg");
-  width: 50%;
+  width: 49%;
+  margin-right: 5px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
 
 #glasses {
   background-image: url("/assets/images/glasses-category.jpg");
-  width: 50%;
+  width: 49%;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
 
 #sale {
   background-image: url("/assets/images/sale-category.jpg");
-  width: 50%;
+  width: 49vw;
+  margin-right: 5px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
 
 #bags {
   background-image: url("/assets/images/bags-category.jpg");
-  width: 50%;
+  width: 49vw;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
 #womens {
   background-image: url("/assets/images/womens-category.jpg");
-  width: 100%;
+  width: 100vw;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
 @media all and (min-width: 1240px) {
-  #mens {
-    width: 50%;
+  .flex-item {
+    min-height: 24vw;
+  }
+
+  .mens {
+    width: 49vw;
+    margin-right: 1vw;
   }
   #trends {
-    width: 25%;
+    width: 24.5vw;
+    margin-right: 1vw;
   }
   #glasses {
-    width: 25%;
+    width: 24.5vw;
   }
   #sale {
-    width: 25%;
+    width: 24vw;
+    margin-top: 5px;
+    margin-right: 1vw;
   }
   #bags {
-    width: 25%;
+    width: 24vw;
+    margin-top: 5px;
   }
   #womens {
-    width: 50%;
+    margin-top: 5px;
+    width: 50vw;
+    margin-left: 1vw;
+  }
+  .italicheading {
+    font-size: 28pt;
+  }
+  .boldheading {
+    font-size: 28pt;
+  }
+
+  #aboutustext {
+    font-size: 16pt;
+  }
+
+  .herotext {
+    font-size: 50pt;
+  }
+  #collectiondate {
+    font-size: 70pt;
+  }
+  .italicheading {
+    font-size: 40pt;
+  }
+  .boldheading {
+    font-size: 40pt;
+  }
+
+  #aboutustext {
+    font-size: 22pt;
   }
 }
 
-.featuredproducts{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 500px;
+@media all and (min-width: 200px) and (max-width: 599px) {
+  .flex-item {
+    min-height: 50vw;
+  }
+}
+
+@media all and (min-width: 600px) and (max-width: 1239px) {
+  .flex-item {
+    min-height: 24vw;
+  }
+  .mens {
+    width: 49vw;
+    margin-right: 1vw;
+  }
+  #trends {
+    width: 24.5vw;
+    margin-right: 1vw;
+  }
+  #glasses {
+    width: 24.5vw;
+  }
+  #sale {
+    width: 24vw;
+    margin-top: 5px;
+    margin-right: 1vw;
+  }
+  #bags {
+    width: 24vw;
+    margin-top: 5px;
+  }
+  #womens {
+    margin-top: 5px;
+    width: 50vw;
+    margin-left: 1vw;
+  }
+
+  .italicheading {
+    font-size: 28pt;
+  }
+  .boldheading {
+    font-size: 28pt;
+  }
+
+  #aboutustext {
+    font-size: 16pt;
+  }
+
+  .herotext {
+    font-size: 40pt;
+  }
+  #collectiondate {
+    font-size: 58pt;
+  }
+}
+.featuredproducts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 .signup {
@@ -221,7 +453,7 @@ div.topnav {
 .oval {
   position: relative;
   margin-top: 50px;
-  width: 80vw;
+  width: 450px;
   height: 60px;
   background: white;
   border-radius: 40px;
@@ -230,24 +462,151 @@ div.topnav {
 }
 .submitbutton {
   position: relative;
-  margin-top:50px;
   height: 50px;
-  width: 150px;
-  background: #e2574C;
+  width: 155px;
+  background: #e2574c;
   border-radius: 40px;
   font-family: "Raleway";
   color: white;
   font-size: 12pt;
   font-style: bold;
+  z-index: 1;
+  right: -146px;
+  top: -57px;
+}
+
+@media all and (min-width: 1240px) {
+  .carousel-cell {
+    width: 25%; /* full width */
+  }
+}
+
+.carousel {
+  margin-bottom: 65px;
+}
+
+.carousel-cell {
+  width: 100%; /* full width */
+  height: 455px; /* height of carousel */
+  text-align: center;
+}
+
+.product-type {
+  text-align: center;
+  color: #969696;
+  font-family: "Raleway";
+}
+
+.product-name {
+  text-align: center;
+  color: #e2574c;
+  font-family: "Playfair Display";
+  font-size: 20px;
+  margin: 15px;
+}
+
+.price {
+  text-align: center;
+  color: #969696;
+}
+
+.add-to-cart {
+  height: 30px;
+  background: #e2574c;
+  border-radius: 40px;
+  font-family: "Raleway";
+  color: white;
+  margin-top: 10px;
+  position: relative;
+  right: -2px;
+}
+@media all and (min-width: 600px) and (max-width: 1239px) {
+  .carousel-cell {
+    width: 50%; /* full width */
+  }
+}
+
+@media all and (min-width: 1240px) {
+  .carousel-cell {
+    width: 25%; /* full width */
+  }
+}
+
+@media all and (max-width: 600px) {
+  .oval {
+    position: relative;
+    margin-top: 50px;
+    width: 275px;
+    height: 39px;
+    background: white;
+    border-radius: 40px;
+    padding-left: 10px;
+    z-index: 0;
+  }
+  .submitbutton {
+    height: 35px;
+    width: 90px;
+    font-size: 10pt;
+    font-style: bold;
+    z-index: 1;
+    right: -95px;
+    top: -39px;
+  }
 }
 
 .footer {
-    display: flex;
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  width: 100vw;
+  background-color: #242424;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.contactinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2vw;
+}
+
+.socialmediaicon {
+  text-align: initial;
+  margin-left: auto;
+}
+
+.socialmediatitle {
+  text-align: left;
+  margin-right: 2vw;
+  margin-left: 1vw;
+}
+
+@media all and (max-width: 599px) {
+  .footer {
     flex-direction: column;
-    height: 300px;
-    width: 100vw;
-    background-color: #242424;
-    color: white;
     justify-content: center;
     align-items: center;
-    text-align: center;
+  }
+
+  .contactinfo {
+    align-items: center;
+  }
+  .socialmediatitle {
+    display: none;
+  }
+  .socialmediaicon {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+    margin-top: 5px;
+    word-spacing: 20px;
+  }
+
+  .socialmediaicon li {
+    display: inline;
+    padding: 2px;
+  }
+}
